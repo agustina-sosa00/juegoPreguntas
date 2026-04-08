@@ -21,7 +21,6 @@ function App() {
   const [categoriaSeleccionada, setCategoriaSeleccionada] =
     useState<string>("");
   const [preguntaRandom, setPreguntaRandom] = useState<Pregunta | null>(null);
-  const [verRespuesta, setVerRespuesta] = useState<boolean>(false);
 
   const handleSeleccionarPregunta = (categoria: string) => {
     const filtradas = TODAS_LAS_PREGUNTAS.filter(
@@ -35,7 +34,6 @@ function App() {
     } else {
       setPreguntaRandom(null);
     }
-    setVerRespuesta(false);
   };
 
   return (
