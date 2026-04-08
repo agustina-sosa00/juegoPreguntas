@@ -1,121 +1,92 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import './App.css'
+import { useState } from "react";
+import "./App.css";
+import { categorias } from "./mocks/categorias";
+import { Modal } from "./components/Modal";
+import { preguntasUXUI } from "./mocks/diseño";
+import { preguntasJavascript } from "./mocks/js";
+
+type Pregunta = {
+  categoria: string;
+  pregunta: string;
+  respuesta: string;
+};
+
+const TODAS_LAS_PREGUNTAS: Pregunta[] = [
+  ...preguntasUXUI,
+  ...preguntasJavascript,
+];
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [openModal, setOpenModal] = useState<boolean>(false);
+  const [categoriaSeleccionada, setCategoriaSeleccionada] =
+    useState<string>("");
+  const [preguntaRandom, setPreguntaRandom] = useState<Pregunta | null>(null);
+  const [verRespuesta, setVerRespuesta] = useState<boolean>(false);
+
+  const handleSeleccionarPregunta = (categoria: string) => {
+    const filtradas = TODAS_LAS_PREGUNTAS.filter(
+      (p) => p.categoria.toLowerCase() === categoria.toLowerCase(),
+    );
+
+    if (filtradas.length > 0) {
+      const nuevaPregunta =
+        filtradas[Math.floor(Math.random() * filtradas.length)];
+      setPreguntaRandom(nuevaPregunta);
+    } else {
+      setPreguntaRandom(null);
+    }
+    setVerRespuesta(false);
+  };
 
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.tsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
+    <div className="min-h-screen flex flex-col items-center justify-start bg-gray-100">
+      <h1 className="text-2xl font-bold mt-4">Selecciona la categoría</h1>
 
-      <div className="ticks"></div>
+      <div className="w-full grid grid-cols-2 gap-4 p-4 max-w-2xl">
+        {categorias.map((item) => (
+          <div
+            className={`w-40 h-20 flex items-center justify-center cursor-pointer rounded-xl shadow-md transition-transform active:scale-95 ${item.color} ${item.text}`}
+            key={item.id}
+            onClick={() => {
+              setCategoriaSeleccionada(item.categoria);
+              handleSeleccionarPregunta(item.categoria);
+              setOpenModal(true);
+            }}
+          >
+            <span className="font-medium">{item.categoria}</span>
+          </div>
+        ))}
+      </div>
 
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
-  )
+      {openModal && (
+        <Modal close={() => setOpenModal(false)} buttonClose title="Pregunta">
+          <div className="flex flex-col justify-between items-center h-full gap-10 py-10">
+            <div className="flex flex-col gap-5">
+              <p className="text-sm text-gray-500 uppercase tracking-wider font-bold">
+                {categoriaSeleccionada}
+              </p>{" "}
+              <p className="text-2xl font-semibold">
+                {preguntaRandom?.pregunta ??
+                  "No hay preguntas en esta categoría"}
+              </p>
+              <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500">
+                <p className="text-lg text-gray-700">
+                  {preguntaRandom?.respuesta}
+                </p>
+              </div>
+            </div>
+            <button
+              className="bg-green-500 text-white font-bold text-lg hover:bg-gray-300 px-4 py-2 w-full rounded-lg transition-colors"
+              onClick={() => handleSeleccionarPregunta(categoriaSeleccionada)}
+              disabled={!preguntaRandom}
+            >
+              Otra pregunta
+            </button>
+          </div>
+        </Modal>
+      )}
+    </div>
+  );
 }
 
-export default App
+export default App;
