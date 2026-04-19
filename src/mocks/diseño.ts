@@ -1,281 +1,248 @@
 export const preguntasUXUI = [
-  // UX vs UI
   {
-    categoria: "Diseño",
+    categoria: "Diseño",
     pregunta: "¿Qué es UX?",
     respuesta:
-      "Es la experiencia completa del usuario al interactuar con un producto.",
+      "UX (User Experience) es todo lo que siente y experimenta una persona cuando usa un producto digital, como una app o una web, incluyendo si le resulta fácil, útil, claro o frustrante, ya que no solo importa que funcione sino también cómo se percibe esa experiencia.",
   },
   {
-    categoria: "Diseño",
+    categoria: "Diseño",
     pregunta: "¿Qué es UI?",
     respuesta:
-      "Es la interfaz visual: colores, tipografías, botones y layouts.",
+      "UI (User Interface) es la parte visual de un producto digital, es decir, todo lo que el usuario ve y toca, como botones, colores, tipografías y diseños, y su objetivo es que la interfaz sea atractiva, clara y fácil de interactuar.",
   },
   {
-    categoria: "Diseño",
+    categoria: "Diseño",
     pregunta: "¿Cuál es la diferencia entre UX y UI?",
-    respuesta: "UX se enfoca en cómo funciona y se siente, UI en cómo se ve.",
-  },
-  {
-    categoria: "Diseño",
-    pregunta: "¿Puede existir UI sin UX?",
     respuesta:
-      "Sí, pero sería una interfaz visual sin una buena experiencia de uso.",
+      "La diferencia es que UX se enfoca en la experiencia completa del usuario, es decir, cómo funciona y se siente el producto, mientras que UI se enfoca en cómo se ve visualmente, por lo que uno se centra en la usabilidad y el otro en la apariencia.",
   },
   {
-    categoria: "Diseño",
-    pregunta: "¿Por qué UX y UI deben trabajar juntos?",
-    respuesta:
-      "Porque una buena experiencia necesita tanto funcionalidad como diseño visual.",
-  },
-
-  {
-    categoria: "Diseño",
+    categoria: "Diseño",
     pregunta: "¿Cuáles son los 7 factores del diseño UX?",
     respuesta:
-      "Útil, usable, deseable, encontrable, accesible, creíble y valioso.",
+      "Los 7 factores del UX son características que debe tener un buen producto: debe ser útil, usable, deseable, encontrable, accesible, creíble y valioso, ya que todos juntos garantizan una buena experiencia.",
   },
   {
-    categoria: "Diseño",
+    categoria: "Diseño",
     pregunta: "¿Qué significa que un producto sea útil?",
-    respuesta: "Que resuelve un problema real del usuario.",
-  },
-  {
-    categoria: "Diseño",
-    pregunta: "¿Qué es la usabilidad?",
-    respuesta: "Qué tan fácil es usar un producto.",
-  },
-  {
-    categoria: "Diseño",
-    pregunta: "¿Qué implica que sea accesible?",
     respuesta:
-      "Que puede ser usado por todas las personas, incluso con discapacidades.",
-  },
-
-  // Métodos evaluación
-  {
-    categoria: "Diseño",
-    pregunta: "¿Qué es un test de usuarios?",
-    respuesta: "Prueba donde usuarios reales interactúan con el producto.",
+      "Un producto es útil cuando realmente resuelve un problema o necesidad del usuario, es decir, tiene una razón de existir y aporta una solución concreta.",
   },
   {
-    categoria: "Diseño",
-    pregunta: "¿Qué es A/B Testing?",
-    respuesta: "Comparar dos versiones para ver cuál funciona mejor.",
+    categoria: "Diseño",
+    pregunta: "¿Qué significa que sea usable?",
+    respuesta:
+      "Que un producto sea usable significa que es fácil de usar, que el usuario puede entenderlo rápidamente y completar sus tareas sin confundirse ni frustrarse.",
   },
   {
-    categoria: "Diseño",
-    pregunta: "¿Qué mide el eye tracking?",
-    respuesta: "Dónde mira el usuario en la pantalla.",
+    categoria: "Diseño",
+    pregunta: "¿Qué significa que sea deseable?",
+    respuesta:
+      "Un producto deseable es aquel que resulta atractivo visualmente y genera una conexión emocional con el usuario, haciendo que quiera usarlo.",
   },
   {
-    categoria: "Diseño",
-    pregunta: "¿Qué es una evaluación heurística?",
-    respuesta: "Análisis experto basado en principios de usabilidad.",
+    categoria: "Diseño",
+    pregunta: "¿Qué significa que sea encontrable?",
+    respuesta:
+      "Que un producto sea encontrable significa que la información y las funciones están bien organizadas, permitiendo al usuario encontrar lo que busca sin dificultad.",
   },
-
-  // UCD
   {
-    categoria: "Diseño",
+    categoria: "Diseño",
+    pregunta: "¿Qué significa que sea accesible?",
+    respuesta:
+      "Un producto accesible es aquel que puede ser utilizado por todas las personas, incluyendo aquellas con discapacidades visuales, auditivas o cognitivas.",
+  },
+  {
+    categoria: "Diseño",
+    pregunta: "¿Qué significa que sea creíble?",
+    respuesta:
+      "Que sea creíble significa que el usuario confía en el producto, en su contenido y en su funcionamiento, lo cual es clave para que lo siga usando.",
+  },
+  {
+    categoria: "Diseño",
+    pregunta: "¿Qué significa que sea valioso?",
+    respuesta:
+      "Un producto es valioso cuando aporta beneficios tanto al usuario como al negocio, logrando cumplir objetivos de ambos lados.",
+  },
+  {
+    categoria: "Diseño",
+    pregunta: "¿Cuáles son los métodos de evaluación UX?",
+    respuesta:
+      "Los métodos de evaluación UX son técnicas para analizar la experiencia del usuario, como test de usuarios, encuestas, entrevistas, A/B testing, eye tracking y análisis de métricas.",
+  },
+  {
+    categoria: "Diseño",
     pregunta: "¿Qué es User-Centered Design?",
     respuesta:
-      "Un enfoque donde el usuario participa en todas las etapas del diseño.",
-  },
-
-  // Design Thinking
-  {
-    categoria: "Diseño",
-    pregunta: "¿Cuáles son las fases del Design Thinking?",
-    respuesta: "Empatizar, definir, idear, prototipar y testear.",
+      "Es un enfoque de diseño donde el usuario es el centro de todo el proceso, participando en la investigación, diseño y pruebas para asegurar que el producto realmente se adapte a sus necesidades.",
   },
   {
-    categoria: "Diseño",
-    pregunta: "¿Qué se hace en la fase de empatizar?",
-    respuesta: "Entender al usuario y sus necesidades.",
-  },
-
-  // Research
-  {
-    categoria: "Diseño",
-    pregunta: "¿Qué es Desk Research?",
-    respuesta: "Analizar información ya existente.",
-  },
-  {
-    categoria: "Diseño",
-    pregunta: "¿Qué diferencia hay entre métodos cualitativos y cuantitativos?",
+    categoria: "Diseño",
+    pregunta: "¿Qué es Design Thinking?",
     respuesta:
-      "Cualitativos exploran comportamientos, cuantitativos miden datos.",
+      "Es una metodología para resolver problemas de forma creativa poniendo al usuario en el centro, pasando por etapas como entenderlo, definir el problema, idear soluciones, prototipar y probar.",
   },
-
-  // Personas
   {
-    categoria: "Diseño",
+    categoria: "Diseño",
+    pregunta: "¿Qué es Desk Research?",
+    respuesta:
+      "Es una investigación basada en información ya existente, como estudios, datos o análisis de la competencia, que se utiliza para entender mejor un problema sin hacer investigación directa.",
+  },
+  {
+    categoria: "Diseño",
+    pregunta: "¿Qué es Brainstorming?",
+    respuesta:
+      "Es una técnica grupal para generar muchas ideas en poco tiempo sin juzgarlas, con el objetivo de fomentar la creatividad.",
+  },
+  {
+    categoria: "Diseño",
+    pregunta: "¿Qué diferencia hay entre cascada y ágil?",
+    respuesta:
+      "Cascada es un modelo lineal donde cada etapa se hace una sola vez y en orden, mientras que ágil es un modelo flexible que trabaja en ciclos cortos, permitiendo cambios constantes.",
+  },
+  {
+    categoria: "Diseño",
+    pregunta: "¿Qué son los métodos cualitativos y cuantitativos?",
+    respuesta:
+      "Los métodos cualitativos buscan entender opiniones y comportamientos (como entrevistas), mientras que los cuantitativos se basan en datos numéricos (como métricas o encuestas).",
+  },
+  {
+    categoria: "Diseño",
     pregunta: "¿Qué es una proto persona?",
-    respuesta: "Una suposición interna sin datos reales.",
+    respuesta:
+      "Es una representación del usuario basada en suposiciones del equipo, sin investigación real.",
   },
   {
-    categoria: "Diseño",
+    categoria: "Diseño",
     pregunta: "¿Qué es una user persona?",
-    respuesta: "Representación basada en datos reales de usuarios.",
+    respuesta:
+      "Es un perfil ficticio basado en datos reales que representa a un tipo de usuario para guiar el diseño.",
   },
-
-  // MVP
   {
-    categoria: "Diseño",
+    categoria: "Diseño",
     pregunta: "¿Qué es un MVP?",
-    respuesta: "Versión mínima de un producto para validar una idea.",
+    respuesta:
+      "Es la versión más simple de un producto que permite lanzarlo rápido para probar si la idea funciona con usuarios reales.",
   },
-
-  // Card Sorting
   {
-    categoria: "Diseño",
+    categoria: "Diseño",
     pregunta: "¿Qué es Card Sorting?",
-    respuesta: "Técnica donde usuarios agrupan información.",
+    respuesta:
+      "Es una técnica donde los usuarios agrupan información para ayudar a organizar el contenido de una aplicación o sitio web.",
   },
-
-  // Flows
   {
-    categoria: "Diseño",
+    categoria: "Diseño",
     pregunta: "¿Qué es un User Flow?",
-    respuesta: "Recorrido completo del usuario.",
+    respuesta:
+      "Es el recorrido completo que hace un usuario dentro de un producto para lograr un objetivo.",
   },
   {
-    categoria: "Diseño",
+    categoria: "Diseño",
     pregunta: "¿Qué es un Task Flow?",
-    respuesta: "Pasos para completar una tarea específica.",
+    respuesta:
+      "Es el paso a paso que sigue un usuario para completar una tarea específica sin considerar alternativas.",
   },
   {
-    categoria: "Diseño",
+    categoria: "Diseño",
     pregunta: "¿Qué es un Flowchart?",
-    respuesta: "Diagrama de procesos con decisiones.",
+    respuesta:
+      "Es un diagrama que representa procesos con decisiones y caminos posibles usando formas gráficas.",
   },
-
-  // Wireframes
   {
-    categoria: "Diseño",
+    categoria: "Diseño",
     pregunta: "¿Qué es un wireframe?",
-    respuesta: "Esquema básico sin diseño visual detallado.",
+    respuesta:
+      "Es un esquema básico de una pantalla que muestra la estructura sin diseño visual detallado.",
   },
-
-  // Mobile First
   {
-    categoria: "Diseño",
+    categoria: "Diseño",
     pregunta: "¿Qué es Mobile First?",
-    respuesta: "Diseñar primero para móviles.",
+    respuesta:
+      "Es una estrategia que consiste en diseñar primero para celulares y luego adaptar a pantallas más grandes.",
   },
-
-  // Contenido
   {
-    categoria: "Diseño",
+    categoria: "Diseño",
     pregunta: "¿Qué es copywriting?",
-    respuesta: "Escritura persuasiva para generar acción.",
+    respuesta:
+      "Es la escritura persuasiva que busca que el usuario realice una acción como comprar o registrarse.",
   },
   {
-    categoria: "Diseño",
+    categoria: "Diseño",
     pregunta: "¿Qué es microcopy?",
-    respuesta: "Textos pequeños dentro de la interfaz.",
+    respuesta:
+      "Son pequeños textos dentro de la interfaz que ayudan al usuario, como mensajes de error o botones.",
   },
   {
-    categoria: "Diseño",
+    categoria: "Diseño",
     pregunta: "¿Qué es UX Writing?",
-    respuesta: "Redacción enfocada en guiar al usuario.",
+    respuesta:
+      "Es la redacción enfocada en guiar al usuario de forma clara durante toda su experiencia digital.",
   },
-
-  // Navegación
   {
-    categoria: "Diseño",
-    pregunta: "¿Qué es un menú hamburguesa?",
-    respuesta: "Menú oculto detrás de un icono de tres líneas.",
+    categoria: "Diseño",
+    pregunta: "¿Cuáles son los patrones de navegación?",
+    respuesta:
+      "Son formas comunes de organizar la navegación, como menú hamburguesa, barra superior, sidebar o navegación inferior.",
   },
-
-  // Patrones
   {
-    categoria: "Diseño",
+    categoria: "Diseño",
     pregunta: "¿Qué es el patrón F?",
-    respuesta: "Lectura en forma de F.",
+    respuesta:
+      "Es una forma de leer donde el usuario recorre la pantalla en forma de F, común en textos largos.",
   },
   {
-    categoria: "Diseño",
+    categoria: "Diseño",
     pregunta: "¿Qué es el patrón Z?",
-    respuesta: "Recorrido visual en forma de Z.",
+    respuesta:
+      "Es una forma de recorrer la pantalla en forma de Z, común en páginas simples.",
   },
-
-  // Atomic Design
   {
-    categoria: "Diseño",
+    categoria: "Diseño",
     pregunta: "¿Qué es Atomic Design?",
-    respuesta: "Metodología basada en componentes.",
+    respuesta:
+      "Es una metodología que organiza el diseño en partes pequeñas reutilizables como átomos, moléculas y organismos.",
   },
   {
-    categoria: "Diseño",
-    pregunta: "¿Cuáles son sus niveles?",
-    respuesta: "Átomos, moléculas, organismos, templates y páginas.",
-  },
-
-  // Nielsen
-  {
-    categoria: "Diseño",
-    pregunta: "¿Qué dice la visibilidad del estado del sistema?",
-    respuesta: "El sistema debe informar qué está pasando.",
+    categoria: "Diseño",
+    pregunta: "¿Qué son las heurísticas de Nielsen?",
+    respuesta:
+      "Son principios que ayudan a evaluar la usabilidad de una interfaz para detectar problemas comunes.",
   },
   {
-    categoria: "Diseño",
-    pregunta: "¿Qué es la consistencia?",
-    respuesta: "Mantener estándares y coherencia.",
+    categoria: "Diseño",
+    pregunta: "¿Qué es la visibilidad del estado del sistema?",
+    respuesta:
+      "Es el principio de que el sistema debe informar siempre al usuario qué está pasando, por ejemplo mostrando cargas o confirmaciones.",
   },
   {
-    categoria: "Diseño",
+    categoria: "Diseño",
     pregunta: "¿Qué es la prevención de errores?",
-    respuesta: "Evitar errores antes de que ocurran.",
+    respuesta:
+      "Es diseñar de forma que el usuario no pueda equivocarse fácilmente, evitando errores antes de que ocurran.",
   },
   {
-    categoria: "Diseño",
+    categoria: "Diseño",
     pregunta: "¿Qué es reconocimiento antes que recuerdo?",
-    respuesta: "Mostrar opciones en lugar de hacer recordar.",
+    respuesta:
+      "Significa mostrar opciones visibles para que el usuario no tenga que memorizar información.",
   },
-
-  // Prototipos
   {
-    categoria: "Diseño",
+    categoria: "Diseño",
     pregunta: "¿Qué es un prototipo?",
-    respuesta: "Representación previa del producto.",
+    respuesta:
+      "Es una versión simulada de un producto que permite probar ideas antes de desarrollarlas.",
   },
   {
-    categoria: "Diseño",
+    categoria: "Diseño",
     pregunta: "¿Qué tipos de prototipos existen?",
-    respuesta: "Baja, media, alta fidelidad y funcional.",
+    respuesta:
+      "Existen prototipos de baja, media y alta fidelidad, además de los funcionales, dependiendo del nivel de detalle.",
   },
-
-  // Extra (generadas)
   {
-    categoria: "Diseño",
+    categoria: "Diseño",
     pregunta: "¿Qué es un punto focal?",
-    respuesta: "Elemento que capta primero la atención del usuario.",
-  },
-  {
-    categoria: "Diseño",
-    pregunta: "¿Por qué es importante la jerarquía visual?",
-    respuesta: "Guía al usuario hacia lo más importante.",
-  },
-  {
-    categoria: "Diseño",
-    pregunta: "¿Qué caracteriza a la metodología ágil?",
-    respuesta: "Iteraciones, feedback constante y flexibilidad.",
-  },
-  {
-    categoria: "Diseño",
-    pregunta: "¿Qué caracteriza a cascada?",
-    respuesta: "Proceso lineal con cambios difíciles.",
-  },
-  {
-    categoria: "Diseño",
-    pregunta: "¿Qué es brainstorming?",
-    respuesta: "Generación de ideas sin juzgar inicialmente.",
-  },
-  {
-    categoria: "Diseño",
-    pregunta: "¿Qué es un storyboard?",
-    respuesta: "Secuencia visual de la experiencia del usuario.",
+    respuesta:
+      "Es el elemento que primero llama la atención del usuario dentro de una pantalla gracias a su tamaño, color o posición.",
   },
 ];

@@ -1,9 +1,13 @@
+/* eslint-disable react-hooks/purity */
 import { useState } from "react";
 import "./App.css";
 import { categorias } from "./mocks/categorias";
 import { Modal } from "./components/Modal";
 import { preguntasUXUI } from "./mocks/diseño";
 import { preguntasJavascript } from "./mocks/js";
+import { preguntasAxios } from "./mocks/axios";
+import { preguntasTanstackQuery } from "./mocks/tanstanck";
+import { preguntasZustand } from "./mocks/zustand";
 
 type Pregunta = {
   categoria: string;
@@ -14,6 +18,9 @@ type Pregunta = {
 const TODAS_LAS_PREGUNTAS: Pregunta[] = [
   ...preguntasUXUI,
   ...preguntasJavascript,
+  ...preguntasAxios,
+  ...preguntasTanstackQuery,
+  ...preguntasZustand,
 ];
 
 function App() {
@@ -37,13 +44,13 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-start bg-gray-100">
-      <h1 className="text-2xl font-bold mt-4">Selecciona la categoría</h1>
+    <div className="min-h-screen flex flex-col items-center w-full py-10 px-5 justify-start bg-gray-100">
+      <h1 className="text-2xl font-bold ">Selecciona la categoría</h1>
 
-      <div className="w-full grid grid-cols-2 gap-4 p-4 max-w-2xl">
+      <div className="w-full grid grid-cols-2 gap-4 p-4  lg:flex lg:justify-center lg:items-center">
         {categorias.map((item) => (
           <div
-            className={`w-40 h-20 flex items-center justify-center cursor-pointer rounded-xl shadow-md transition-transform active:scale-95 ${item.color} ${item.text}`}
+            className={`w-40 h-20 lg:w-96 lg:h-52 flex items-center justify-center cursor-pointer rounded-xl shadow-md transition-transform active:scale-95 ${item.color} ${item.text}`}
             key={item.id}
             onClick={() => {
               setCategoriaSeleccionada(item.categoria);
@@ -51,7 +58,9 @@ function App() {
               setOpenModal(true);
             }}
           >
-            <span className="font-medium">{item.categoria}</span>
+            <span className="font-medium text-base lg:text-2xl">
+              {item.categoria}
+            </span>
           </div>
         ))}
       </div>
@@ -62,7 +71,7 @@ function App() {
             <div className="flex flex-col gap-5">
               <p className="text-sm text-gray-500 uppercase tracking-wider font-bold">
                 {categoriaSeleccionada}
-              </p>{" "}
+              </p>
               <p className="text-2xl font-semibold">
                 {preguntaRandom?.pregunta ??
                   "No hay preguntas en esta categoría"}
@@ -74,7 +83,7 @@ function App() {
               </div>
             </div>
             <button
-              className="bg-green-500 text-white font-bold text-lg hover:bg-gray-300 px-4 py-2 w-full rounded-lg transition-colors"
+              className="bg-pink-500 text-white font-bold text-lg hover:bg-pink-400 px-4 py-2 w-full rounded-lg transition-colors"
               onClick={() => handleSeleccionarPregunta(categoriaSeleccionada)}
               disabled={!preguntaRandom}
             >
